@@ -15,8 +15,7 @@ This project eliminates the need for manual attendance and reduces proxy attenda
 - Secure single-admin login
 - Web-based dashboard
 - Attendance records stored in SQLite database
-- Attendance analytics with visual graphs
-- Browser-based live camera feed (bonus feature)
+- Browser-based live camera feed
 - Start / Stop camera control from web interface
 
 ---
@@ -27,8 +26,7 @@ This project eliminates the need for manual attendance and reduces proxy attenda
 - **Computer Vision:** OpenCV, Dlib  
 - **Web Framework:** Flask  
 - **Database:** SQLite  
-- **Frontend:** HTML, CSS  
-- **Data Visualization:** Matplotlib  
+- **Frontend:** HTML, CSS 
 
 ---
 
@@ -51,14 +49,62 @@ This project eliminates the need for manual attendance and reduces proxy attenda
 4. **Dashboard**
    - Live camera feed displayed in browser.
    - Attendance records shown in a table.
-   - Graph showing attendance count per person.
    - Camera can be started and stopped using buttons.
-
-5. **Analytics**
-   - Attendance data is analyzed using SQLite queries.
-   - Visual graphs are generated using Matplotlib.
 
 ---
 
-## Project Structure
+## Installation & Setup
 
+1. Clone the repository:
+git clone https://github.com/jayPatel989/Smart-Attendance-System
+
+2. Navigate to the project directory:
+
+3. Install required Python libraries:
+pip install -r requirements.txt
+
+4. For first time only, run db_creation.py file from database/ folder to create an attendance database (If you want, change username and password from this file before running it):
+
+5. Run the application (app.py):
+
+6. Open the browser by clicking on the link:
+
+---
+
+## Important Notes
+
+- This project is designed for **local system use**.
+- The camera is controlled by OpenCV on the backend.
+- The browser only displays the video stream.
+- Only one admin is supported (single-user system).
+
+---
+
+## Use Cases
+
+- Schools and colleges
+- Training institutes
+- Offices
+- Labs and workshops
+
+---
+
+## Future Enhancements
+
+- Multiple admin roles
+- Cloud database support
+- CSV export of attendance
+- Improved face recognition accuracy
+- Mobile-friendly UI
+
+---
+
+## Author
+
+**Jay Patel**
+
+---
+
+## Disclaimer
+
+This project is developed for academic and learning purposes.
