@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+
+projectEnv/
+.env/
+
+database/attendance.db
+
+.DS_Store
+Thumbs.db

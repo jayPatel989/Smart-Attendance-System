@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <h1>Smart Attendance Dashboard</h1>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</div>
+
+<div class="container">
+
+    <!-- ACTIONS -->
+    <div class="card">
+        <a href="{{ url_for('start_attendance') }}">
+            <button>Start Attendance</button>
+        </a>
+
+        <a href="{{ url_for('stop_camera') }}">
+            <button>Stop Camera</button>
+        </a>
+
+        <a href="{{ url_for('register') }}">
+            <button>Register New Person</button>
+        </a>
+    </div>
+
+    <div>
+        <h2>Live Camera Feed</h2>
+        <img src="{{ url_for('video_feed') }}" width="50%">
+    </div>
+    
+    <!-- TABLE -->
+    <div class="card">
+        <h2>Attendance Records</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Time</th>
+            </tr>
+
+            {% for row in records %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+</div>
+
+</body>
+</html>
